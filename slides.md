@@ -48,9 +48,8 @@ Dottorando in Informatica e Matematica del gruppo di ricerca *ARA* (Apprendiment
 Knowledge Graph Embedding, Neuro-Symbolic AI, Ontologies and Ontology Injection
 
 
-
-
 ---
+
 
 # **Indice** dei contenuti
 
