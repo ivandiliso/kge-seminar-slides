@@ -650,7 +650,8 @@ Spazi più complessi possono essere utilizzati per:
 
 Il materiale è un riadattamento delle slide presentate durante il corso "Semantic Technologies and Knowledge Graphs" del Corso di Laurea Magistrale in Artificial Intelligence. Trovate ulteriori dettagli in:
 
-> - **KGE e**: Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation.
+> - **Knowledge Graphs**: Hogan, A., Blomqvist, E., Cochez, M., d’Amato, C., Melo, G. D., Gutierrez, C., ... & Zimmermann, A. (2021). Knowledge graphs. ACM Computing Surveys (Csur), 54(4), 1-37.
+> - **KGE**: Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation.
 > - **Spazi oltre l'euclideo**: Cao, J., Fang, J., Meng, Z., & Liang, S. (2024). Knowledge graph embedding: A survey from the perspective of representation spaces. ACM Computing Surveys, 56(6), 1-42
 
 
