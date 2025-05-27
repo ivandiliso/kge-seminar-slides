@@ -3,7 +3,7 @@
 > Corso di Laurea Magistrale in "Data Science"
 > **Apprendimento Automatico** AA 2024-2025
 
-> Sorgente in MARP [![VS Marketplace][badge-marp-vscode]][marp-vscode-release]
+> Sorgente in MARP ![VS Marketplace][badge-marp-vscode]
 
 
 ### Indice dei contenuti
@@ -22,11 +22,6 @@
     - Spazi di apprendimento oltre l'euclideo
 
 
-[badge-marp-vscode]: https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&logo=visual-studio-code&label=Marketplace
-
-
-
-[marp-vscode-release]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 [badge-marp-vscode]: https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&logo=visual-studio-code&label=Marketplace
 
 
