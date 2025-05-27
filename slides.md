@@ -9,6 +9,29 @@ author: "Ivan Diliso"
 math: katex
 ---
 
+
+<style>
+.two-columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.two-columns img {
+  max-width: 48%;
+  height: auto;
+}
+section.top-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 100px;
+}
+</style>
+
+
+
+
 $$
 % Custom Functions
 \gdef\c#1{\mathcal{#1}}
@@ -45,7 +68,7 @@ Speaker:    **Ivan Diliso**
 ### **Ivan Diliso**
 Dottorando in Informatica e Matematica del gruppo di ricerca *ARA* (Apprendimento e Ragionamento Automatico).
 # Di cosa mi occupo?
-Knowledge Graph Embedding, Neuro-Symbolic AI, Ontologies and Ontology Injection
+Knowledge Graph Embedding, Neuro-Symbolic AI, Ontologie e  Ontology Injection
 
 
 ---
@@ -70,8 +93,11 @@ Knowledge Graph Embedding, Neuro-Symbolic AI, Ontologies and Ontology Injection
 Un *Knowledge Graph* è una rappresentazione strutturata di conoscenza tramite nodi (*entità*) e archi (*relazioni*) per collegare e integrare informazioni.
 ![bg right:60% 100%](img/kg_pic.png)
 
+<!-- _footer: Image from: https://deeppavlov.ai/research/tpost/bn15u1y4v1-improving-knowledge-graph-completion-wit  -->
 
 ---
+
+
 
 # **Definizioni** Fondamentali
 
@@ -81,6 +107,9 @@ Sui dati, possiamo fare due tipi di assunzioni fondamentali:
 
 ![bg contain right:60% 110%](img/KG.png)
 
+
+<!-- _footer: Image from: Hogan, Aidan, et al. "Knowledge graphs." ACM Computing Surveys (Csur) 54.4 (2021): 1-37.  -->
+
 ---
 
 # **Definizioni** Fondamentali
@@ -89,12 +118,14 @@ Questo tipo di dati si presenta sottoforma di *triple*, nella forma $<s,p,o>$, a
 
 $$<Mario, friendOf, Luigi>$$
 
-Quando parlerò di **soggeto** della tripla, mi sto riferendo alla entità in testa alla tripla (eg. Mario), con **oggetto** mi riferisco invece alla entità in coda alla tripla (eg. Luigi)
+Quando parlo di **soggeto** della tripla, mi sto riferendo alla entità in testa alla tripla (eg. Mario), con **oggetto** mi riferisco invece alla entità in coda alla tripla (eg. Luigi)
 
 ---
 
 <!-- header: Machine Learning su Knowledge Graphs -->
 # **Machine Learning** su Knowledge Graphs
+
+<!-- _footer: Image from: https://towardsdatascience.com/graph-neural-networks-with-pyg-on-node-classification-link-prediction-and-anomaly-detection-14aa38fe1275/  -->
 
 Problemi risolvibili:
 - Link Prediction
@@ -106,6 +137,7 @@ Problemi risolvibili:
 - ...
 
 ![bg contain right:60% 95%](img/unnamed.png)
+
 
 ---
 
@@ -139,6 +171,8 @@ Abbiamo la necessità di gestire la *complessità* dei grafi:
 
 ---
 
+<!-- _footer: Image from:  Murphy, K. P. (2022). Probabilistic machine learning: an introduction. MIT press. -->
+
 # Apprendimento su *Grafi* come **Encoder** -**Decoder**
 
 - Nei modelli che vedremo, il decoder prenderà la forma di una *lookup table*
@@ -149,6 +183,7 @@ Abbiamo la necessità di gestire la *complessità* dei grafi:
 
 
 ---
+
 <!-- header: Apprendere le Rappresentazioni di Nodi e Relazioni -->
 # Apprendere le **Rappresentazioni** di Nodi e Relazioni
 
@@ -156,17 +191,30 @@ Abbiamo la necessità di gestire la *complessità* dei grafi:
 
 Metodologie basate sull'apprendimento automatico di *rappresentazioni vettoriali* di nodi e relazioni. Proiettiamo la conoscenza *simbolica* su uno spazio vettoriale continuo.
 
----
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
 
-### Da **nodi** e **relazioni**...
-
-![](img/kge1.png)
 
 ---
 
-### a rappresentazioni **vettoriali**!
 
-![](img/kge2.png)
+
+<!-- _class: top-align -->
+
+## *Da **nodi** e **relazioni**...*
+
+![bg ](img/kge1.png)
+
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
+
+---
+
+<!-- _class: top-align -->
+
+## *...a rappresentazioni **vettoriali**!*
+
+![bg ](img/kge2.png)
+
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
 
 ---
 
@@ -175,6 +223,9 @@ Metodologie basate sull'apprendimento automatico di *rappresentazioni vettoriali
 ![](img/kge-models.png)
 
 In letteratura troviamo varie tipologie di modelli, che si possono categorizzare sulla base della tipologia di apprendimento, *translational*, *factorization*, *neural*, etc etc
+
+
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
 
 ---
 <!-- header: Anatomia di un modello di KGE -->
@@ -185,13 +236,14 @@ In letteratura troviamo varie tipologie di modelli, che si possono categorizzare
 
 - Funzione di **score** delle triple $f(t)$
 - Funzione di **loss** $\mathcal{L}$
-- Algoritmo di **ottimizzazione**
 - Strategia di generazione dei **negativi**
 
 
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
+
 ---
 # Funzione di **score** delle triple
-La funzione $f$ assegna uno score ad una tripla $<s,p,o>$. La strategia di scoring varia in base alla metodologia scelta ad esempio:
+La funzione $f$ assegna uno score ad una tripla $<s,p,o>$. La strategia di scoring varia in base alla metodologia scelta, ad esempio:
 
 ## **Traslation** Based
 
@@ -210,21 +262,6 @@ $$
 
 ## **Traslation** - Esempio grafico
 
-<br/>
-
-<style>
-  .two-columns {
-    display: flex;
-    justify-content: space-around; /* or space-between, center, etc. */
-    align-items: center; /* or flex-start, flex-end, stretch */
-    gap: 20px; /* Adjust the space between images */
-  }
-  .two-columns img {
-    max-width: 48%; /* Adjust to fit two images with some space */
-    height: auto;
-  }
-</style>
-
 <div class="two-columns">
 TransE
   <img src="img/transe.png" alt="Description of Image 1">
@@ -232,6 +269,8 @@ TransE
   <img src="img/rotate.png" alt="Description of Image 2">
 </div>
 
+
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
 ---
 
 
@@ -262,6 +301,8 @@ con $f$ funzione non lineare, $*$ operatore di convoluzione e $\overline{x}$ un 
 
 Modelli si differenziano nel tipo di *spazio* utilizzato (vedremo più avanti), funzione di scoring, complessita nello spazio e nel tempo e tipo di *proprietà che possono modellare*
 
+<!-- _footer: Table from:  Cao, J., Fang, J., Meng, Z., & Liang, S. (2024). Knowledge graph embedding: A survey from the perspective of representation spaces. ACM Computing Surveys, 56(6), 1-42. -->
+
 --- 
 
 # **Complessità** e **Proprietà** dei KGE
@@ -272,8 +313,6 @@ Modelli si differenziano nel tipo di *spazio* utilizzato (vedremo più avanti), 
 - Composizione  `<Alice, childOf, Jack>`,`<Jack, siblingOf, Mary>`,
 `<Alice, nieceOf, Mary>`
 
-</div>
-</center>
 
 ![](img/kge-table.png)
 
@@ -472,8 +511,9 @@ La calibrazione è un processo di *post-processing* che trasforma gli score in e
 
 # Calibrazione con **Negativi Ground Truth** *CWA*
 
-
 ![](img/calib2.png)
+
+
 
 ---
 
@@ -483,6 +523,8 @@ La calibrazione è un processo di *post-processing* che trasforma gli score in e
 
 ![](img/calib3.png)
 
+
+
 ---
 
 # Calibrazione **Efficacia**
@@ -490,6 +532,8 @@ La calibrazione è un processo di *post-processing* che trasforma gli score in e
 Modelli calibrati producono risultati migliori rispetto a modelli non calibrati, producono inoltre predizioni più **affidabili** e **interpretabili**
 
 ![](img/calib4.png)
+
+<!-- _footer: Image from:  Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation, a free account has to be created. Slides are avaiable without registration. -->
 
 ---
 
@@ -556,11 +600,14 @@ Spazi più complessi possono essere utilizzati per:
 
 # **Spazi** e Metodi KGE: *Strutture Algebriche*
 
-- *Spazi Vettoriali*: Sfruttano somma tra vettori e moltiplicazione per scalaer per proiettare entità e relazioni nello stesso spazio. Preserva le interazioni relazionali.
+- *Spazi Vettoriali*: Sfruttano somma tra vettori e moltiplicazione per scalare per proiettare entità e relazioni nello stesso spazio. Preserva le interazioni relazionali.
 - *Gruppi*: Permettono di modellare proprietà come inversione e composizione
 - *Anelli*: Utili nella rappresentazione con task orientatin-related, grazie alla sua superfice non orientata
 
 ![bg right:48% 96%](img/cao2.png)
+
+<!-- _footer: Table from:  Cao, J., Fang, J., Meng, Z., & Liang, S. (2024). Knowledge graph embedding: A survey from the perspective of representation spaces. ACM Computing Surveys, 56(6), 1-42. -->
+
 
 ---
 
@@ -572,14 +619,20 @@ Spazi più complessi possono essere utilizzati per:
 
 ![bg right:48% 96%](img/cao2.png)
 
+<!-- _footer: Table from:  Cao, J., Fang, J., Meng, Z., & Liang, S. (2024). Knowledge graph embedding: A survey from the perspective of representation spaces. ACM Computing Surveys, 56(6), 1-42. -->
+
+
 ---
 
 # **Spazi** e Metodi KGE: *Strutture Analitiche*
 
-- *Probailità*: Capaci di modellare conoscenza incenerta (fuzzy)
+- *Probailità*: Capaci di modellare conoscenza incenerta
 - *Euclideo*: Facilitano l'aquisizione di rappresentazioni dinamiche e continue
 
 ![bg right:48% 96%](img/cao2.png)
+
+<!-- _footer: Table from:  Cao, J., Fang, J., Meng, Z., & Liang, S. (2024). Knowledge graph embedding: A survey from the perspective of representation spaces. ACM Computing Surveys, 56(6), 1-42. -->
+
 
 ---
 <!-- paginate: false-->
@@ -589,5 +642,15 @@ Spazi più complessi possono essere utilizzati per:
 ![bg left:40% 70%](img/ara_left.png)
 # <center> *Grazie per l'attenzione*
 <center> Ivan Diliso, Ph.D Student, ARA
+
+
+---
+
+# *Riferimenti*
+
+Il materiale è un riadattamento delle slide presentate durante il corso "Semantic Technologies and Knowledge Graphs" del Corso di Laurea Magistrale in Artificial Intelligence. Trovate ulteriori dettagli in:
+
+> - **KGE e**: Costabello, L., Pai, S., McCarthy, N., & Janik, A. (2020). Knowledge graph embeddings tutorial: From theory to practice. order to view the presentation.
+> - **Spazi oltre l'euclideo**: Cao, J., Fang, J., Meng, Z., & Liang, S. (2024). Knowledge graph embedding: A survey from the perspective of representation spaces. ACM Computing Surveys, 56(6), 1-42
 
 
